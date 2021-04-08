@@ -136,7 +136,7 @@ function animate() {
         ctx.globalAlpha = 1
 
         if (Math.random() < 0.05) {
-            fireworks.push(new Firework('rgb('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+')'))
+            fireworks.push(new Firework(`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`))
         }
 
         for (const firework of fireworks) {
@@ -155,7 +155,7 @@ function animate() {
 
 addEventListener('contextmenu', (event) => {
     event.preventDefault()
-    fireworks.push(new Firework('rgb('+Math.random()*255+','+Math.random()*255+','+Math.random()*255+')'))
+    fireworks.push(new Firework(`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`))
 })
 
 animate()
