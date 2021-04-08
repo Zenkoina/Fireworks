@@ -1,4 +1,4 @@
-const canvas = document.createElement("CANVAS")
+const canvas = document.createElement('CANVAS')
 const ctx = canvas.getContext('2d')
 
 const fps = 60 //if above monitors refresh rate whole animation will throttle
