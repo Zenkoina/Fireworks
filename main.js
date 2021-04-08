@@ -156,4 +156,10 @@ addEventListener('contextmenu', (event) => {
     fireworks.push(new Firework(`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`))
 })
 
+addEventListener('resize', () => {
+	canvas.width = innerWidth
+	canvas.height = innerHeight
+})
+
+
 animate()
