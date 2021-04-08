@@ -40,7 +40,6 @@ class Particle {
         }
         ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI)
         ctx.fill()
-        ctx.closePath()
     }
 }
 
@@ -59,8 +58,7 @@ class FireworkShot extends Particle {
 class FireworkBurstParticle extends Particle {
     constructor(x, y, color, lifetime) {
         super(x, y, color)
-        this.vel.randomize()
-        this.vel.mult(Math.random() * (Math.random() * 10 + 5) + 1)
+        this.vel.randomize().mult(Math.random() * (Math.random() * 10 + 5) + 1)
         this.lifetime = lifetime
         this.startlifetime = lifetime
     }
