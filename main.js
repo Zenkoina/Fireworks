@@ -161,5 +161,4 @@ addEventListener('resize', () => {
 	canvas.height = innerHeight
 })
 
-
 animate()
