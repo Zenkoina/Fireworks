@@ -33,11 +33,7 @@ class Particle {
 
     draw() {
         ctx.beginPath()
-        if (this.color == undefined) {
-            ctx.fillStyle = 'white'
-        } else {
-            ctx.fillStyle = this.color
-        }
+        ctx.fillStyle = (this.color === undefined) ? 'white' : this.color
         ctx.arc(this.pos.x, this.pos.y, this.radius, 0, 2 * Math.PI)
         ctx.fill()
     }
