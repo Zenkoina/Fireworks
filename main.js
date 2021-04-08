@@ -5,8 +5,8 @@ const fps = 60 //if above monitors refresh rate whole animation will throttle
 const fpsinterval = 1000 / fps
 let then = performance.now() - fpsinterval
 
-let fireworks = []
-let gravity = new CreateVector(0, 0.2)
+const fireworks = []
+const gravity = new CreateVector(0, 0.2)
 
 document.body.appendChild(canvas)
 canvas.width = innerWidth
@@ -99,7 +99,7 @@ class Firework {
 
     explode() {
         this.exploded = true
-        let repeats = Math.random() * 167 + 33
+        const repeats = Math.random() * 167 + 33
         for (let i = 0; i < repeats; i++) {
             this.particles.push(new FireworkBurstParticle(this.firework.pos.x, this.firework.pos.y, this.color, Math.random() * 40 + 20))
         }
