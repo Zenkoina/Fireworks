@@ -15,8 +15,8 @@ canvas.height = innerHeight
 class Particle {
     constructor(x, y, color) {
         this.pos = new CreateVector(x, y)
-        this.vel = new CreateVector(0, 0)
-        this.acc = new CreateVector(0, 0)
+        this.vel = new CreateVector()
+        this.acc = new CreateVector()
         this.radius = 1.5
         this.color = color
     }
