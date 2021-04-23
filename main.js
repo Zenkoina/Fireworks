@@ -88,11 +88,11 @@ class Firework {
                 this.explode()
             }
         }
-        for (let i = this.particles.length - 1; i >= 0; i--) {
-            this.particles[i].applyForce(gravity)
-            this.particles[i].update()
-            if (this.particles[i].lifetime <= 0) {
-                this.particles.splice(i, 1)
+        for (let index = this.particles.length - 1; index >= 0; index--) {
+            this.particles[index].applyForce(gravity)
+            this.particles[index].update()
+            if (this.particles[index].lifetime <= 0) {
+                this.particles.splice(index, 1)
             }
         }
     }
@@ -100,7 +100,7 @@ class Firework {
     explode() {
         this.exploded = true
         const repeats = Math.random() * 167 + 33
-        for (let i = 0; i < repeats; i++) {
+        for (let index = 0; index < repeats; index++) {
             this.particles.push(new FireworkBurstParticle(this.firework.pos.x, this.firework.pos.y, this.color, Math.random() * 40 + 20))
         }
     }
@@ -137,11 +137,11 @@ function animate() {
             firework.update()
             firework.draw()
         }
-        for (let i = fireworks.length - 1; i >= 0; i--) {
-            fireworks[i].update()
-            fireworks[i].draw()
-            if (fireworks[i].exploded && fireworks[i].particles.length === 0) {
-                fireworks.splice(i, 1)
+        for (let index = fireworks.length - 1; index >= 0; index--) {
+            fireworks[index].update()
+            fireworks[index].draw()
+            if (fireworks[index].exploded && fireworks[index].particles.length === 0) {
+                fireworks.splice(index, 1)
             }
         }
 	}
