@@ -149,7 +149,9 @@ function animate() {
 
 addEventListener('contextmenu', (event) => {
     event.preventDefault()
-    fireworks.push(new Firework(`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`))
+    for (let index = 0; index < 10; index++) {
+        fireworks.push(new Firework(`rgb(${Math.random()*255},${Math.random()*255},${Math.random()*255})`))
+    }
 })
 
 addEventListener('resize', () => {
